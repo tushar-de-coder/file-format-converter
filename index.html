@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Convert documents, spreadsheets, presentations and images online.">
+  <title>Convertly — File Converter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#"><span class="brand-icon">↔</span> convertly</a><nav><a href="#how">How it works</a><a href="#formats">Formats</a><a class="nav-cta" href="#converter">Convert files <span>↗</span></a></nav></header>
+<main>
+  <section class="hero">
+    <div class="eyebrow"><span class="live-dot"></span> SIMPLE. FAST. SECURE.</div>
+    <h1>Your files,<br><span>in the right format.</span></h1>
+    <p class="hero-copy">Convert documents, images, spreadsheets and presentations in a few clicks. No complicated software required.</p>
+    <div class="hero-points"><span>✓ Easy to use</span><span>✓ Multiple formats</span><span>✓ Works in your browser</span></div>
+    <div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="file-card file-a"><b>PDF</b><span>Document</span></div><div class="convert-arrow">↗</div><div class="file-card file-b"><b>DOCX</b><span>Editable file</span></div><div class="spark spark-a">✦</div><div class="spark spark-b">✧</div></div>
+  </section>
+  <section class="converter-wrap" id="converter">
+    <div class="section-heading"><div><div class="eyebrow">THE CONVERTER</div><h2>Make the switch</h2></div><span class="secure-label">⌑ Files are processed securely</span></div>
+    <div class="converter-card">
+      <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Choose a file">
+        <input id="fileInput" type="file" hidden>
+        <div class="upload-symbol">↑</div><h3>Drop your file here</h3><p>or <button type="button" id="browseBtn" class="text-button">browse files</button> from your device</p><small>Choose a file you have permission to convert. Max file size depends on the conversion provider.</small>
+      </div>
+      <div class="file-row hidden" id="fileRow"><div class="file-type-icon">FILE</div><div class="file-meta"><strong id="fileName">document.pdf</strong><span id="fileSize">0 KB</span></div><button id="removeFile" class="icon-button" aria-label="Remove file">×</button></div>
+      <div class="format-controls"><div class="format-field"><label for="fromFormat">FROM FORMAT</label><input id="fromFormat" disabled placeholder="Detected from file"></div><div class="swap-icon">→</div><div class="format-field"><label for="toFormat">CONVERT TO</label><select id="toFormat"><optgroup label="Documents"><option value="pdf">PDF</option><option value="docx">DOCX</option><option value="doc">DOC</option><option value="txt">TXT</option><option value="rtf">RTF</option><option value="odt">ODT</option><option value="html">HTML</option><option value="md">Markdown</option></optgroup><optgroup label="Spreadsheets"><option value="xlsx">XLSX</option><option value="xls">XLS</option><option value="csv">CSV</option><option value="ods">ODS</option><option value="tsv">TSV</option></optgroup><optgroup label="Presentations"><option value="pptx">PPTX</option><option value="ppt">PPT</option><option value="odp">ODP</option></optgroup><optgroup label="Images"><option value="png">PNG</option><option value="jpg">JPG</option><option value="webp">WEBP</option><option value="gif">GIF</option><option value="bmp">BMP</option><option value="tiff">TIFF</option><option value="svg">SVG</option></optgroup></select></div></div>
+      <button id="convertBtn" class="primary-button" disabled>Convert file <span>→</span></button>
+      <div id="status" class="status hidden" role="status"></div>
+      <div id="result" class="result hidden"><div class="result-check">✓</div><div><strong>Conversion ready</strong><p>Your converted file is ready to download.</p></div><a id="downloadBtn" class="download-button" target="_blank" rel="noopener">Download ↓</a></div>
+      <p class="privacy-note">By converting, you confirm you have the right to process this file. Avoid uploading confidential or sensitive documents.</p>
+    </div>
+  </section>
+  <section class="how-section" id="how"><div class="eyebrow">THREE SIMPLE STEPS</div><h2>From one format to another.</h2><div class="steps"><article><div class="step-num">01</div><div class="step-icon">↑</div><h3>Upload your file</h3><p>Choose a file from your computer or drag it into the upload area.</p></article><article><div class="step-num">02</div><div class="step-icon">⇄</div><h3>Pick a format</h3><p>Select the format you need from the available conversion options.</p></article><article><div class="step-num">03</div><div class="step-icon">↓</div><h3>Download the result</h3><p>When conversion finishes, download the converted file to your device.</p></article></div></section>
+  <section class="formats-section" id="formats"><div><div class="eyebrow">BUILT FOR EVERYDAY FILES</div><h2>One place for your formats.</h2><p>Availability depends on the source file, target format and conversion provider.</p></div><div class="format-chips"><span>PDF</span><span>DOCX</span><span>XLSX</span><span>PPTX</span><span>JPG</span><span>PNG</span><span>CSV</span><span>TXT</span><span>WEBP</span><span>ODT</span><span>RTF</span><span>HTML</span></div></section>
+</main>
+<footer><a class="brand" href="#"><span class="brand-icon">↔</span> convertly</a><span>Convert thoughtfully. Keep your files safe.</span><span>© <span id="year"></span> Convertly</span></footer>
+<script src="app.js"></script>
+</body></html>
