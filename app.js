@@ -1,4 +1,4 @@
-const API_BASE = (window.CONVERTER_API_URL || "").replace(/\/$/, "");
+const API_BASE =const API_BASE = "https://convertly-api-hsli.onrender.com";
 const fileInput = document.querySelector("#fileInput");
 const dropzone = document.querySelector("#dropzone");
 const browseBtn = document.querySelector("#browseBtn");
